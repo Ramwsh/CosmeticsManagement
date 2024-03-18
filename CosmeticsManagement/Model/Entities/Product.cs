@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CosmeticsManagement.JetEFTest.Entities
+namespace CosmeticsManagement.Model.Entities
 {
-    // Products table
+    // Таблица "Товар"
     [Table("Товар")]
     public class Product
     {
@@ -23,3 +23,4 @@ namespace CosmeticsManagement.JetEFTest.Entities
         public int Price { get; set; }
     }
 }
+

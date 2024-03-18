@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CosmeticsManagement.JetEFTest.Entities
+namespace CosmeticsManagement.Model.Entities
 {
     // Таблица предприятия
     [Table("Предприятие")]

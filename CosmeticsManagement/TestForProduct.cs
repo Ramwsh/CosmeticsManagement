@@ -1,6 +1,6 @@
 ﻿
-using CosmeticsManagement.JetEFTest.CRUD;
-using CosmeticsManagement.JetEFTest.Entities;
+using CosmeticsManagement.Model.CRUD;
+using CosmeticsManagement.Model.Entities;
 
 namespace CosmeticsManagement
 {

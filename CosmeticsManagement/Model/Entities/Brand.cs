@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CosmeticsManagement.JetEFTest.Entities
+namespace CosmeticsManagement.Model.Entities
 {
     // Таблица для сущностей типа Ьренд
     [Table("Бренд")]
@@ -13,7 +13,6 @@ namespace CosmeticsManagement.JetEFTest.Entities
         public int BCode { get; set; }
 
         // Поле имени.
-
         public string? BName { get; set; }        
     }
 }
