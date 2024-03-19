@@ -9,9 +9,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Brand.jpg" />
+    <None Remove="View\Resources\Brand.jpg" />
+    <None Remove="View\Resources\Delivery.jpg" />
+    <None Remove="View\Resources\Factory.jpg" />
+    <None Remove="View\Resources\Orders.jpg" />
+    <None Remove="View\Resources\Product.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EntityFrameworkCore.Jet" Version="8.0.0-beta.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
     <PackageReference Include="System.Data.OleDb" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Brand.jpg" />
+    <Resource Include="View\Resources\Brand.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Delivery.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Factory.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Orders.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Product.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
