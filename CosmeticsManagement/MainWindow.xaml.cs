@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Input;
+using CosmeticsManagement.ViewModel;
 
 namespace CosmeticsManagement
 {    
@@ -8,6 +9,7 @@ namespace CosmeticsManagement
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel(this);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

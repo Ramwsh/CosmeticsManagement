@@ -144,7 +144,8 @@
                                 FontFamily="Segoe UI Variable Text Semilight"
                                 FontSize="16"
                                 Foreground="Black"
-                                ItemsSource="{d:SampleData}" />
+                                ItemsSource="{Binding Brands}"
+                                SelectedItem="{Binding SelectedBrandItem}" />
                         </StackPanel>
 
                         <StackPanel
@@ -166,6 +167,7 @@
 
                             <Button
                                 Width="300"
+                                Command="{Binding CreateCommand}"
                                 Content="Создать"
                                 FontFamily="Segoe UI Variable Text Semilight"
                                 FontSize="32"
@@ -174,6 +176,7 @@
                             <Button
                                 Width="300"
                                 Margin="0,5,0,0"
+                                Command="{Binding DeleteCommand}"
                                 Content="Удалить"
                                 FontFamily="Segoe UI Variable Text Semilight"
                                 FontSize="32"
@@ -182,6 +185,7 @@
                             <Button
                                 Width="300"
                                 Margin="0,5,0,0"
+                                Command="{Binding UpdateCommand}"
                                 Content="Изменить"
                                 FontFamily="Segoe UI Variable Text Semilight"
                                 FontSize="32"
@@ -199,6 +203,7 @@
                                 FontFamily="Segoe UI Variable Text Semilight"
                                 FontSize="32"
                                 Foreground="Black"
+                                Text="{Binding BrandId}"
                                 TextAlignment="Center" />
 
                             <TextBlock
@@ -213,6 +218,7 @@
                                 FontFamily="Segoe UI Variable Text Semilight"
                                 FontSize="32"
                                 Foreground="Black"
+                                Text="{Binding BrandName}"
                                 TextAlignment="Center" />
 
                         </StackPanel>

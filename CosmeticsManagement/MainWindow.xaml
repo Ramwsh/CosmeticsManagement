@@ -74,7 +74,8 @@
                 Margin="5,0,5,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Background="Transparent">
+                Background="Transparent"
+                Command="{Binding OpenBrandViewCommand}">
                 <Image Source="View/Resources/Brand.jpg" Stretch="Fill" />
             </Button>
             <Button
