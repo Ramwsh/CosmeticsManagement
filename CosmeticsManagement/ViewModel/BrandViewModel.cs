@@ -3,11 +3,15 @@ using CosmeticsManagement.Model.Entities;
 using CosmeticsManagement.Model.CRUD;
 using System.Windows.Input;
 using System.Collections.ObjectModel;
+using System.Windows;
+using CosmeticsManagement.View;
 
 namespace CosmeticsManagement.ViewModel
 {
     public class BrandViewModel : INotifyPropertyChanged
     {
+        private Window currentWindow;
+
         private ObservableCollection<Brand> _brands;
 
         public ObservableCollection<Brand> Brands
@@ -72,9 +76,10 @@ namespace CosmeticsManagement.ViewModel
             }
         }
 
-        public BrandViewModel()
+        public BrandViewModel(Window window)
         {            
             _brands = new ObservableCollection<Brand>(new Controller<Brand>().Read());
+            currentWindow = window;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -114,6 +119,38 @@ namespace CosmeticsManagement.ViewModel
                 Brands = new ObservableCollection<Brand>(new Controller<Brand>().Read());
                 OnPropertyChanged(nameof(Brands));
             }
+        });
+
+        public ICommand OpenProductsCommand => new Commands((obj) =>
+        {
+            ProductsView productsView = new ProductsView();
+            productsView.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            productsView.Show();
+            currentWindow.Close();
+        });
+
+        public ICommand OpenFactoriesViewCommand => new Commands((obj) =>
+        {
+            FactoriesView factoriesView = new FactoriesView();
+            factoriesView.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            factoriesView.Show();
+            currentWindow.Close();
+        });
+
+        public ICommand OpenOrdersViewCommand => new Commands((obj) =>
+        {
+            OrdersView ordersView = new OrdersView();
+            ordersView.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            ordersView.Show();
+            currentWindow.Close();
+        });
+
+        public ICommand OpenDeliveriesViewCommand => new Commands((obj) =>
+        {
+            DeliveriesView deliveriesView = new DeliveriesView();
+            deliveriesView.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            deliveriesView.Show();
+            currentWindow.Close();
         });
     }
 }

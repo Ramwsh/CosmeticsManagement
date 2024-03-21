@@ -1,11 +1,11 @@
 ﻿<Window
-    x:Class="CosmeticsManagement.View.BrandsView"
+    x:Class="CosmeticsManagement.View.OrdersView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:CosmeticsManagement.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="BrandsView"
+    Title="OrdersView"
     Width="1280"
     Height="720"
     AllowsTransparency="True"
@@ -93,8 +93,8 @@
                     <Button
                         Margin="0,5,0,0"
                         Background="#ECF0F1"
-                        Command="{Binding OpenOrdersViewCommand}"
-                        Content="Заказы"
+                        Command="{Binding OpenBrandsViewCommand}"
+                        Content="Бренды"
                         FontFamily="Segoe UI Variable Text Semilight"
                         FontSize="32"
                         Foreground="Black" />
@@ -102,7 +102,7 @@
                     <Button
                         Margin="0,5,0,0"
                         Background="#ECF0F1"
-                        Command="{Binding OpenProductsCommand}"
+                        Command="{Binding OpenProductsViewCommand}"
                         Content="Товары"
                         FontFamily="Segoe UI Variable Text Semilight"
                         FontSize="32"
@@ -122,7 +122,7 @@
                         HorizontalAlignment="Right"
                         FontFamily="Segoe UI Variable Text Semilight"
                         FontSize="32"
-                        Text="Брэнды"
+                        Text="Заказы"
                         TextAlignment="Right" />
                 </StackPanel>
 
@@ -149,8 +149,8 @@
                                 FontFamily="Segoe UI Variable Text Semilight"
                                 FontSize="16"
                                 Foreground="Black"
-                                ItemsSource="{Binding Brands}"
-                                SelectedItem="{Binding SelectedBrandItem}" />
+                                ItemsSource="{Binding Orders}"
+                                SelectedItem="{Binding SelectedOrderItem}" />
                         </StackPanel>
 
                         <StackPanel
@@ -198,7 +198,7 @@
 
                             <TextBlock
                                 FontFamily="Segoe UI Variable Text Semilight"
-                                FontSize="32"
+                                FontSize="22"
                                 Foreground="Black"
                                 Text="ID записи"
                                 TextAlignment="Center" />
@@ -206,26 +206,86 @@
                             <TextBox
                                 Width="300"
                                 FontFamily="Segoe UI Variable Text Semilight"
-                                FontSize="32"
+                                FontSize="24"
                                 Foreground="Black"
                                 PreviewTextInput="TextBox_PreviewTextInput"
-                                Text="{Binding BrandId}"
+                                Text="{Binding OrderId}"
                                 TextAlignment="Center" />
 
                             <TextBlock
                                 FontFamily="Segoe UI Variable Text Semilight"
-                                FontSize="32"
+                                FontSize="22"
                                 Foreground="Black"
-                                Text="Название брэнда"
+                                Text="Дата заказа"
+                                TextAlignment="Center" />
+
+                            <DatePicker
+                                Width="300"
+                                FontFamily="Segoe UI Variable Text Semilight"
+                                FontSize="22"
+                                Foreground="Black"
+                                SelectedDate="{Binding orderDate}" />
+
+                            <TextBlock
+                                FontFamily="Segoe UI Variable Text Semilight"
+                                FontSize="22"
+                                Foreground="Black"
+                                Text="Дата исполнения заказа"
+                                TextAlignment="Center" />
+
+                            <DatePicker
+                                Width="300"
+                                FontFamily="Segoe UI Variable Text Semilight"
+                                FontSize="22"
+                                Foreground="Black"
+                                SelectedDate="{Binding ExecutionDate}" />
+
+                            <TextBlock
+                                FontFamily="Segoe UI Variable Text Semilight"
+                                FontSize="22"
+                                Foreground="Black"
+                                Text="Количество товара в заказе"
                                 TextAlignment="Center" />
 
                             <TextBox
                                 Width="300"
                                 FontFamily="Segoe UI Variable Text Semilight"
-                                FontSize="32"
+                                FontSize="22"
                                 Foreground="Black"
-                                Text="{Binding BrandName}"
+                                Text="{Binding ProductCount}"
                                 TextAlignment="Center" />
+
+                            <TextBlock
+                                FontFamily="Segoe UI Variable Text Semilight"
+                                FontSize="22"
+                                Foreground="Black"
+                                Text="Товар"
+                                TextAlignment="Center" />
+
+                            <ComboBox
+                                Width="300"
+                                DisplayMemberPath="PName"
+                                FontFamily="Segoe UI Variable Text Semilight"
+                                FontSize="22"
+                                Foreground="Black"
+                                ItemsSource="{Binding Products}"
+                                SelectedItem="{Binding SelectedProductItem}" />
+
+                            <TextBlock
+                                FontFamily="Segoe UI Variable Text Semilight"
+                                FontSize="22"
+                                Foreground="Black"
+                                Text="Предприятие"
+                                TextAlignment="Center" />
+
+                            <ComboBox
+                                Width="300"
+                                DisplayMemberPath="FName"
+                                FontFamily="Segoe UI Variable Text Semilight"
+                                FontSize="22"
+                                Foreground="Black"
+                                ItemsSource="{Binding Factories}"
+                                SelectedItem="{Binding SelectedFactoryItem}" />
 
                         </StackPanel>
 

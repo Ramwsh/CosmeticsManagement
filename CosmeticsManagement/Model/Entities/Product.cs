@@ -11,15 +11,19 @@ namespace CosmeticsManagement.Model.Entities
         [Key]
         public int PCode { get; set; }
 
+        // код бренда
+        public int BCode { get; set; }
+
+        // название бренда
+        public string? BName { get; set; }
+
         // Поле имя товара
         public string? PName { get; set; }
 
         // Поле величина измерения (литр, кг, шт. и т.д).
-
         public string? Measure { get; set; }
 
         // Поле цена
-
         public int Price { get; set; }
     }
 }

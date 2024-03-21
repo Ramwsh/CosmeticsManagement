@@ -14,8 +14,14 @@ namespace CosmeticsManagement.Model.Entities
         // Поле код предприятия
         public int FCode { get; set; }
 
+        // Название предприятия
+        public string? FName { get; set; }
+
         // Поле код товара
         public int PCode { get; set; }
+
+        // название товара
+        public string? PName { get; set; }
 
         // Поле количество товаров
         public int ProductCountInOrder { get; set; }

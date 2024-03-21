@@ -3,13 +3,13 @@ using System.Windows.Input;
 using CosmeticsManagement.ViewModel;
 
 namespace CosmeticsManagement.View
-{    
-    public partial class BrandsView : Window
+{
+    public partial class OrdersView : Window
     {
-        public BrandsView()
+        public OrdersView()
         {
             InitializeComponent();
-            DataContext = new BrandViewModel(this);
+            DataContext = new OrdersViewModel(this);
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

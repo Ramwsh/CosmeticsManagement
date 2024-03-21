@@ -4,12 +4,12 @@ using CosmeticsManagement.ViewModel;
 
 namespace CosmeticsManagement.View
 {    
-    public partial class BrandsView : Window
+    public partial class DeliveriesView : Window
     {
-        public BrandsView()
+        public DeliveriesView()
         {
             InitializeComponent();
-            DataContext = new BrandViewModel(this);
+            DataContext = new DeliveriesViewModel(this);
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

@@ -4,12 +4,12 @@ using CosmeticsManagement.ViewModel;
 
 namespace CosmeticsManagement.View
 {    
-    public partial class BrandsView : Window
+    public partial class ProductsView : Window
     {
-        public BrandsView()
+        public ProductsView()
         {
             InitializeComponent();
-            DataContext = new BrandViewModel(this);
+            DataContext = new ProductsViewModel(this);
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -29,6 +29,14 @@ namespace CosmeticsManagement.View
         }
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!char.IsDigit(e.Text, e.Text.Length - 1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextBox_PreviewTextInput_1(object sender, TextCompositionEventArgs e)
         {
             if (!char.IsDigit(e.Text, e.Text.Length - 1))
             {

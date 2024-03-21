@@ -86,7 +86,8 @@
                 Margin="5,0,5,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Background="Transparent">
+                Background="Transparent"
+                Command="{Binding OpenDeliveriesViewCommand}">
                 <Image Source="View/Resources/Delivery.jpg" Stretch="Fill" />
             </Button>
             <Button
@@ -97,7 +98,8 @@
                 Margin="5,0,5,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Background="Transparent">
+                Background="Transparent"
+                Command="{Binding OpenFactoriesViewCommand}">
                 <Image Source="View/Resources/Factory.jpg" Stretch="Fill" />
             </Button>
             <Button
@@ -108,7 +110,8 @@
                 Margin="5,0,5,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Background="Transparent">
+                Background="Transparent"
+                Command="{Binding OpenOrdersViewCommand}">
                 <Image Source="View/Resources/Orders.jpg" Stretch="Fill" />
             </Button>
             <Button
@@ -119,7 +122,8 @@
                 Margin="5,0,5,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Background="Transparent">
+                Background="Transparent"
+                Command="{Binding OpenProductViewCommand}">
                 <Image Source="View/Resources/Product.jpg" Stretch="Fill" />
             </Button>
             <TextBlock
